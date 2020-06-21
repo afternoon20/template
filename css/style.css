@@ -1,0 +1,122 @@
+@charset "UTF-8";
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  line-height: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+dt,
+dd,
+p,
+div,
+span,
+img,
+a,
+table,
+tr,
+th,
+td,
+ul,
+ol,
+dl,
+li {
+  border: 0;
+  box-sizing: border-box;
+  font-size: 100%;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+footer,
+header,
+nav,
+section,
+main {
+  display: block;
+}
+
+ul, ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: #444;
+  left: 0;
+  padding: 0 45px;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 2;
+}
+
+.header > .flex {
+  align-items: center;
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+}
+
+.header-logo {
+  margin-right: auto;
+  width: 200px;
+}
+
+.header-nav {
+  display: flex;
+}
+
+.header-nav li {
+  border-bottom: solid 2px #444;
+  margin-bottom: 2px;
+  padding: 15px;
+}
+
+.header-nav li:hover {
+  border-bottom: solid 2px red;
+}
+
+.header-nav li a {
+  color: #ffffff;
+  font-size: 16px;
+}
+
+@media screen and (max-width: 699px) {
+  .header-nav {
+    display: none;
+  }
+}
+
+.inner {
+  margin: 0 auto;
+  width: 700px;
+  width: 100%;
+}

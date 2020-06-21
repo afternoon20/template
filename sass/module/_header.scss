@@ -1,0 +1,42 @@
+.header{
+  width: 100%;
+  background-color: $base-color;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 0 45px;
+  z-index: 2;
+  
+  >.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-height;
+  }
+
+  &-logo{
+    width: 200px;
+    margin-right: auto;
+  }
+  &-nav{
+    display: flex;
+
+    li{
+      padding: 15px;
+      margin-bottom: 2px;
+      border-bottom: solid 2px $base-color;
+
+      &:hover{
+        border-bottom: solid 2px red;
+      }
+
+      a{
+        font-size: 16px;
+        color: #ffffff;
+      }
+    }
+    @include mq("tab"){
+      display: none;
+    }
+  }
+}
