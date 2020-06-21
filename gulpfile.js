@@ -10,8 +10,6 @@ const cssdeclsort = require("css-declaration-sorter");
 const browserSync = require('browser-sync');
 
 gulp.task("sass", function () {
-  console.log('HelloWorld!');
-
   return gulp.src("./sass/**/*.scss")
     .pipe(plumber({ errorHandler: notify.onError("Error: <%= error.message %>") }))
     .pipe(sassGlob())
