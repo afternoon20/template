@@ -1,0 +1,51 @@
+.mv {
+  background: linear-gradient(45deg, rgba(129, 234, 219, 0.9), rgba(152, 225, 251, 1), rgba(47, 135, 191, 0.9)), url($imgDir + "/mv_bg.jpg") center center;
+  background-size: cover;
+  height: calc(100vh - 160px);
+  margin-top: -60px;
+
+  @include mq("sp") {
+    height: calc(100vh - 80px);
+    text-align: center;
+  }
+
+  .mv-table {
+    display: table;
+    width: 100%;
+    height: 100%;
+  }
+
+  .mv-table-cell {
+    display: table-cell;
+    vertical-align: middle;
+    color: #fff;
+  }
+
+  .mv-ttl {
+    font-size: 3.6em;
+    font-weight: 700;
+    margin-bottom: 32px;
+    text-align: left;
+
+    @include mq("sp") {
+      font-size: 2.4em;
+    }
+  }
+
+  .mv-txtarea {
+    margin-bottom: 64px;
+    text-align: left;
+
+    @include mq("sp") {
+      margin-bottom: 48px;
+    }
+  }
+
+  .mv-txt {
+    font-size: 2.4em;
+
+    @include mq("sp") {
+      font-size: 1.6em;
+    }
+  }
+}

@@ -18,7 +18,7 @@ html {
 }
 
 body {
-  font-family: 'Avenir','Helvetica Neue','Helvetica','Arial','Hiragino Sans','ヒラギノ角ゴシック',YuGothic,'Yu Gothic','メイリオ', Meiryo,'ＭＳ Ｐゴシック','MS PGothic';
+  font-family: "Avenir", "Helvetica Neue", "Helvetica", "Arial", "Hiragino Sans", "ヒラギノ角ゴシック", YuGothic, "Yu Gothic", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic";
   line-height: 1;
 }
 
@@ -40,9 +40,11 @@ td,
 ul,
 ol,
 dl,
-li {
+li,
+figure {
   border: 0;
   box-sizing: border-box;
+  color: inherit;
   font-size: 100%;
   font-weight: normal;
   margin: 0;
@@ -60,7 +62,8 @@ main {
   display: block;
 }
 
-ul, ol {
+ul,
+ol {
   list-style: none;
 }
 
@@ -68,55 +71,149 @@ a {
   text-decoration: none;
 }
 
-.header {
-  background-color: #444;
-  left: 0;
-  padding: 0 45px;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 2;
+.br-sp {
+  display: none;
 }
 
-.header > .flex {
+@media screen and (max-width: 767px) {
+  .br-sp {
+    display: inline;
+  }
+}
+
+.br-tab {
+  display: none;
+}
+
+@media screen and (max-width: 1015px) {
+  .br-tab {
+    display: inline;
+  }
+}
+
+.header {
+  background: rgba(255, 255, 255, 0);
+  height: 60px;
+  position: relative;
+  top: 0;
+  width: 100%;
+}
+
+.header-wrapper {
   align-items: center;
   display: flex;
-  height: 100px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
   justify-content: space-between;
 }
 
 .header-logo {
-  margin-right: auto;
-  width: 200px;
+  color: #fff;
+  font-size: 1.6rem;
 }
 
 .header-nav {
-  display: flex;
+  margin-left: auto;
 }
 
-.header-nav li {
-  border-bottom: solid 2px #444;
-  margin-bottom: 2px;
-  padding: 15px;
-}
-
-.header-nav li:hover {
-  border-bottom: solid 2px red;
-}
-
-.header-nav li a {
-  color: #ffffff;
-  font-size: 16px;
-}
-
-@media screen and (max-width: 699px) {
+@media screen and (max-width: 767px) {
   .header-nav {
     display: none;
   }
 }
 
+.header-nav__list {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.header-nav__list-item {
+  margin-right: 40px;
+}
+
+.header-nav__list-link {
+  color: #fff;
+  font-size: 1.6rem;
+}
+
+.header-nav__list-link:hover {
+  opacity: 0.5;
+}
+
 .inner {
+  height: 100%;
   margin: 0 auto;
-  width: 700px;
+  max-width: 100%;
+  padding: 0 40px;
+  width: 1016px;
+}
+
+@media screen and (max-width: 767px) {
+  .inner {
+    padding: 0 20px;
+  }
+}
+
+.mv {
+  background: linear-gradient(45deg, rgba(129, 234, 219, 0.9), #98e1fb, rgba(47, 135, 191, 0.9)), url("../img/dist/mv_bg.jpg") center center;
+  background-size: cover;
+  height: calc(100vh - 160px);
+  margin-top: -60px;
+}
+
+@media screen and (max-width: 767px) {
+  .mv {
+    height: calc(100vh - 80px);
+    text-align: center;
+  }
+}
+
+.mv .mv-table {
+  display: table;
+  height: 100%;
   width: 100%;
+}
+
+.mv .mv-table-cell {
+  color: #fff;
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.mv .mv-ttl {
+  font-size: 3.6em;
+  font-weight: 700;
+  margin-bottom: 32px;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .mv .mv-ttl {
+    font-size: 2.4em;
+  }
+}
+
+.mv .mv-txtarea {
+  margin-bottom: 64px;
+  text-align: left;
+}
+
+@media screen and (max-width: 767px) {
+  .mv .mv-txtarea {
+    margin-bottom: 48px;
+  }
+}
+
+.mv .mv-txt {
+  font-size: 2.4em;
+}
+
+@media screen and (max-width: 767px) {
+  .mv .mv-txt {
+    font-size: 1.6em;
+  }
 }
