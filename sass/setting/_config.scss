@@ -1,5 +1,5 @@
 // レイアウト幅
-$layout-width-inner: 1016px;
+$layout-width-inner: 1150px;
 
 // ブレークポイント
 $breakpoints: (
@@ -11,8 +11,12 @@ $breakpoints: (
 //画像格納ディレクトリ
 $imgDir: '../img/dist';
 
-//ベースカラー
+//色
 $base-color: rgba(47, 135, 191, 1);
-
-// 強調色
 $emp-color: #e79c2a;
+$header-color: rgba(50, 50, 50, 1);
+$mv-color: rgba(50, 50, 50, 0.3);
+
+//フォント
+$ff-yuGo: -apple-system, BlinkMacSystemFont, Roboto, 'Segoe UI', 'Helvetica Neue', HelveticaNeue, YuGothic, 'Yu Gothic Medium', 'Yu Gothic', Verdana, Meiryo,
+  sans-serif;

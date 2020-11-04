@@ -3,7 +3,7 @@
   top: 0;
   height: 60px;
   width: 100%;
-  background: rgba(255, 255, 255, 0);
+  background: $header-color;
 }
 
 .header-wrapper {
@@ -19,7 +19,7 @@
 .header-nav {
   margin-left: auto;
 
-  @include mq("sp") {
+  @include mq('sp') {
     display: none;
   }
 }

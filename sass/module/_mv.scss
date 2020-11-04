@@ -1,10 +1,10 @@
 .mv {
-  background: linear-gradient(45deg, rgba(129, 234, 219, 0.9), rgba(152, 225, 251, 1), rgba(47, 135, 191, 0.9)), url($imgDir + "/mv_bg.jpg") center center;
+  background: $mv-color center center;
   background-size: cover;
   height: calc(100vh - 160px);
   margin-top: -60px;
 
-  @include mq("sp") {
+  @include mq('sp') {
     height: calc(100vh - 80px);
     text-align: center;
   }
@@ -27,7 +27,7 @@
     margin-bottom: 32px;
     text-align: left;
 
-    @include mq("sp") {
+    @include mq('sp') {
       font-size: 2.4em;
     }
   }
@@ -36,7 +36,7 @@
     margin-bottom: 64px;
     text-align: left;
 
-    @include mq("sp") {
+    @include mq('sp') {
       margin-bottom: 48px;
     }
   }
@@ -44,7 +44,7 @@
   .mv-txt {
     font-size: 2.4em;
 
-    @include mq("sp") {
+    @include mq('sp') {
       font-size: 1.6em;
     }
   }
