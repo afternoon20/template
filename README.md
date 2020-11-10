@@ -59,10 +59,14 @@
 
 ## エラーの対処
 ### Windowsでgulpが起動しない。
-`Error: Missing binding C:\Users\shimada\Documents\template\node_modules\node-sass\vendor\win32-x64-72\binding.node`
+```bash
+Error: Missing binding C:\Users\shimada\Documents\template\node_modules\node-sass\vendor\win32-x64-72\binding.node
+```
 
 node-sassをリビルドする。
 
-`npm rebuild node-sass`
+```bash
+npm rebuild node-sass
+```
 
 
